@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base64 Encoder & Decoder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="split-container">
+    <h1>Base64 Encoder & Decoder</h1>
+
+    <div class="split-panels">
+      <div class="panel left-panel">
+        <label for="inputText" class="panel-label">INPUT</label>
+        <textarea id="inputText" placeholder="Enter text to encode or Base64 string to decode..."></textarea>
+      </div>
+
+      <div class="panel right-panel">
+        <label for="outputText" class="panel-label">OUTPUT</label>
+        <textarea id="outputText" readonly placeholder="Result will appear here..."></textarea>
+      </div>
+    </div>
+
+    <div id="errorMessage" class="error-banner">Invalid Base64 String</div>
+
+    <div class="button-row">
+      <button class="btn btn-green" onclick="encodeText()">Encode</button>
+      <button class="btn btn-green" onclick="decodeText()">Decode</button>
+      <button class="btn btn-green" onclick="copyOutput()">Copy Output</button>
+      <button class="btn btn-green" onclick="clearFields()">Clear</button>
+    </div>
+  </div>
+
+  <div id="copyModal" class="modal-overlay">
+    <div class="modal-dialog">
+      <div id="modalIcon" class="modal-icon">📋</div>
+      <div id="modalTitle" class="modal-title">Copied output to clipboard!</div>
+      <button class="btn btn-green modal-btn" onclick="closeCopyModal()">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
